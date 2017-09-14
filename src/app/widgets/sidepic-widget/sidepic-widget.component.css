@@ -1,0 +1,23 @@
+.widget {
+  margin-bottom: 20px;
+}
+
+.icon-pad {
+  padding: 1.5rem;
+}
+
+.icon-font {
+  font-size: 1.5rem;
+}
+
+.icon-margin-right {
+  margin-right: 1rem;
+}
+
+.icon-margin-left {
+  margin-right: 1rem;
+}
+
+.widget-font {
+  font-family: "Ubuntu", sans-serif;
+}

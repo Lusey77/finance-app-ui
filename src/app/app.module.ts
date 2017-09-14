@@ -6,12 +6,14 @@ import { ApiService } from "./api-service";
 import { HttpModule } from "@angular/http";
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule, routingComponents } from "./app.routing";
+import { SidepicWidgetComponent } from './widgets/sidepic-widget/sidepic-widget.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    routingComponents
+    routingComponents,
+    SidepicWidgetComponent
   ],
   imports: [
     BrowserModule, HttpModule, AppRoutingModule
