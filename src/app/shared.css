@@ -1,0 +1,51 @@
+.enabled {
+  opacity: 1;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: .3;
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  background-color: #262626;
+  overflow: hidden;
+}
+
+.p-t-1 {
+  padding-top: 1rem;
+}
+
+.p-s-1 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.p-s-3 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.p-s-3 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.p-1 {
+  padding: 1rem !important;
+}
+
+.p-2 {
+  padding: 2rem !important;
+}
+
+.p-3 {
+  padding: 3rem !important;
+}
+
+.center {
+  margin: 0 auto;
+  width: 50%;
+}

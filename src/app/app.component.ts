@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {ApiService} from "./api-service";
-import {NavItem} from "../models/navItem";
+import { ApiService } from "./api-service";
+import { NavItem } from "../models/navItem";
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,7 @@ import {NavItem} from "../models/navItem";
 })
 export class AppComponent {
   title: string = `Finance Manager`;
+  page: string = `Home`;
   navItems: NavItem[] =
     [
       {navTitle: `Accounts`, navLink: `Accounts`},

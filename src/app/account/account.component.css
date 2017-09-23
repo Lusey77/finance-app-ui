@@ -1,0 +1,18 @@
+.ui-dropdown {
+  width: 100%;
+}
+
+.ui-dialog-content {
+  height: 200px;
+}
+
+:host {
+  flex-grow: 1;
+  display: flex;
+  align-self: stretch;
+}
+
+.accountCard {
+  height: 200px;
+  border: 1px solid red;
+}

@@ -1,3 +1,31 @@
-<p>
-  account works!
-</p>
+<!-- App Loading Screen -->
+<app-loading *ngIf="loading" style="width: 100%"></app-loading>
+
+
+<!--<p-dialog header="Select an account" [(visible)]="accountNotSelected" [width]="500" [height]="300" *ngIf="!loading">-->
+  <!--<div class="center">-->
+    <!--<p-dropdown [options]="selectableAccounts" [autoWidth]="false" [scrollHeight]="200" >-->
+
+    <!--</p-dropdown>-->
+  <!--</div>-->
+<!--</p-dialog>-->
+
+
+<!--<div class="container-fluid p-t-1" *ngIf="!loading">-->
+  <!--&lt;!&ndash; Account Details &ndash;&gt;-->
+  <!--<div class="col-md-6 col-sm-12" >-->
+
+  <!--</div>-->
+  <!--&lt;!&ndash; Account Charts &ndash;&gt;-->
+  <!--<div class="col-md-6 col-sm-12">-->
+
+  <!--</div>-->
+<!--</div>-->
+<div class="container-fluid p-1" *ngIf="!loading">
+  <!-- Account Options -->
+  <div class="row p-s-1">
+    <div class="col-lg-2 col-md-3 col-sm-4 col-6 accountCard">
+
+    </div>
+  </div>
+</div>

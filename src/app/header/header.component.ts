@@ -8,12 +8,12 @@ import {NavItem} from "../../models/navItem";
 })
 export class HeaderComponent implements OnInit {
   @Input() title: string;
+  @Input() page: string;
   @Input() navItems: NavItem[];
 
   constructor() { }
 
   ngOnInit() {
-    console.log(this.navItems);
   }
 
 }

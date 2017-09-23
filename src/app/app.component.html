@@ -1,2 +1,4 @@
-<app-header [title]=title [navItems]=navItems></app-header>
-<router-outlet></router-outlet>
+<div class="background">
+  <app-header [title]=title [navItems]=navItems [page]="page" style="flex-shrink: 0"></app-header>
+  <router-outlet></router-outlet>
+</div>
