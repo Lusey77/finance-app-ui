@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {ApiService} from "./api-service";
-import {NavItem} from "../models/navItem";
+import { ApiService } from './api-service';
+import { NavItem } from '../models/navItem';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import {NavItem} from "../models/navItem";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title: string = `Finance Manager`;
+  title = `Finance Manager`;
   navItems: NavItem[] =
     [
       {navTitle: `Accounts`, navLink: `Accounts`},
@@ -21,7 +21,6 @@ export class AppComponent {
   getAccounts() {
     this.apiService.getAccounts()
       .subscribe(account => {
-        console.log(account[0].Name);
         this.title = account[0].Name;
       });
   }
