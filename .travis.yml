@@ -3,7 +3,7 @@ dist: trusty
 language: node_js
 node_js:
 - 6.11.3
-addons: 
+addons:
 apt:
   sources:
   - google-chrome
@@ -28,3 +28,4 @@ deploy:
   on:
     repo: Lusey77/finance-app-ui
     branch: dev
+  run: ng build
