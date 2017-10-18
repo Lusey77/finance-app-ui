@@ -24,8 +24,9 @@ deploy:
   provider: heroku
   api_key:
     secure: V+Bes9Cg3GK8JGywyWpAIxPKIK2dzv0lDMRNYJg0Zi7Lbe0lyFri96PNFB5No2RHafQf/f3LqkVHTdJsKyoQwqNIrN5ziV9ha1AFoCQVpbLnE0+xtTr2afngdZK53YYV1ZKr4En6Pjsjce5sBE/HbnCZqTfZ6Njjm4l3UaFIiSy9QKIF7HnnHi8k6rdPoRgO21kjw9eUcRTtlho6wbnNd2SnoWtHRee8M0Ymuu+iak4RjvzaRwSxOA4m9jAZBYhTfaPKHH0nlV4wp8cSRRIcd7+fNF7G4MAJgO2YjA+wnTkqhJC2t7PjBUoZjj4OOOJrcrq33ldKFkG2QNZaaCVWOL4M0+WV9tAJVvXzRKRvnTL+UTMz/K+pS4KwP9Box92L4pDjRjF83iLNDHv5twcZTy+cqm/jHprDuhmBD8EpmHpnUZ5Xr2zeW2JC6Tgz+9TJXORnoe1cGO4nr4fDEEKEEGEVRJxIPV/pFYSLnv9YH766HXBTF7Se4WwxCFo+uHNlRL4yOZBj3Qr0VxKMXB0kF0vygiDN1VPSXZmC3WCCLEA78LFJ/Goph2DUfujUbnGzjWi27EI12Zp8Utyn27NSl21PfYPhbZ7t2uopDi+IHTr5SLe9SjrJiCMj01GEQmdXe1oL5zc7ygOgLShRx57yyFlqJ0dPwudC57iRah0YuD8=
+  skip_cleanup: true
   app: finance-app-ui
   on:
     repo: Lusey77/finance-app-ui
     branch: dev
-  run: ng build
+
