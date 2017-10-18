@@ -6,7 +6,6 @@ import { ApiService } from './api-service';
 import { HttpModule } from '@angular/http';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule, routingComponents } from './app.routing';
-import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -15,9 +14,9 @@ import { RouterModule } from '@angular/router';
     routingComponents
   ],
   imports: [
-    BrowserModule, HttpModule, AppRoutingModule, RouterModule
+    BrowserModule, HttpModule, AppRoutingModule
   ],
   providers: [ApiService],
-  bootstrap: [AppComponent, RouterModule]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
