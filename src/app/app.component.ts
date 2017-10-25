@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ApiService } from "./api-service";
-import { NavItem } from "../models/navItem";
+import { ApiService } from './api-service';
+import { NavItem } from '../models/navItem';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +22,6 @@ export class AppComponent {
   getAccounts() {
     this.apiService.getAccounts()
       .subscribe(account => {
-        console.log(account[0].Name);
         this.title = account[0].Name;
       });
   }
