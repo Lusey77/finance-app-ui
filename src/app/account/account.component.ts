@@ -1,39 +1,59 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {AccountModel} from "../../models/accountModel";
-import {SelectItem} from "primeng/primeng";
+import {SelectItem} from 'primeng/primeng';
+import {ApiService} from '../api-service';
+import {AccountModel} from '../../models/accountModel';
 
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',
-  styleUrls: ['./account.component.css', '../shared.css'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: [
+    '../../../node_modules/primeng/resources/themes/omega/theme.css',
+    '../../../node_modules/primeng/resources/primeng.min.css',
+    '../../../node_modules/font-awesome/css/font-awesome.min.css',
+    '../../../node_modules/bootstrap/dist/css/bootstrap.min.css',
+    './account.component.css',
+    '../shared.css'
+  ],
+  encapsulation: ViewEncapsulation.Native
 })
 export class AccountComponent implements OnInit {
   // Represents whether the user has selected an account to view
-  accountNotSelected: boolean = true;
+  accountSelected = false;
   // Represents if the page is in a loading state of not
-  loading: boolean = true;
+  loading = false;
   // Represents all of the active accounts
   accounts: AccountModel[] = [];
   selectableAccounts: SelectItem[] = [];
-  selectedAccount: string;
+  selectedAccount: AccountModel;
 
-  constructor() { }
+  constructor(private webApi: ApiService) { }
 
-  loadDelay(ms: number): Promise<any> {
-    return new Promise(resolve => setTimeout(resolve, ms));
+  async ngOnInit() {
+    this.loading = true;
+    await this.loadAccounts();
+    this.loading = false;
   }
 
-  ngOnInit() {
-    this.loadDelay(1000).then(() => {this.loading = false});
-    this.selectableAccounts.push({label:'New York', value:{id:1, name: 'New York', code: 'NY'}});
-    this.selectableAccounts.push({label:'New York', value:{id:1, name: 'New York', code: 'NY'}});
-    this.selectableAccounts.push({label:'New York', value:{id:1, name: 'New York', code: 'NY'}});
-    this.selectableAccounts.push({label:'New York', value:{id:1, name: 'New York', code: 'NY'}});
-    this.selectableAccounts.push({label:'New York', value:{id:1, name: 'New York', code: 'NY'}});
-    this.selectableAccounts.push({label:'New York', value:{id:1, name: 'New York', code: 'NY'}});
-    this.selectableAccounts.push({label:'New York', value:{id:1, name: 'New York', code: 'NY'}});
-    this.selectableAccounts.push({label:'New York', value:{id:1, name: 'New York', code: 'NY'}});
+  loadAccounts() {
+    return new Promise<string>((resolve, reject) => {
+      this.webApi.getAccounts()
+        .subscribe(response => {
+            this.accounts = response;
+            this.selectableAccounts = this.accounts.map(account => {
+              return {label: account.name, value: account};
+            });
+            resolve('success');
+          },
+          error => {
+            console.log(error);
+            reject('error');
+          });
+    });
+  }
+
+  selectAccount() {
+    this.accountSelected = true;
+    console.log(this.selectedAccount);
   }
 
 }

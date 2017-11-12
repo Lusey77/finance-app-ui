@@ -1,4 +1,8 @@
 <div class="background">
-  <app-header [title]=title [navItems]=navItems [page]="page" style="flex-shrink: 0"></app-header>
-  <router-outlet></router-outlet>
+  <div class="shrink-0 flex">
+    <app-header [title]=title [navItems]=navItems [page]="page"></app-header>
+  </div>
+  <div class="grow-1 flex">
+    <router-outlet></router-outlet>
+  </div>
 </div>

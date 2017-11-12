@@ -1,5 +1,5 @@
 export interface AccountModel {
     name: string;
-    description: string;
-    balance: number;
+    description?: string;
+    balance?: number;
 }

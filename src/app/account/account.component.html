@@ -1,31 +1,51 @@
 <!-- App Loading Screen -->
 <app-loading *ngIf="loading" style="width: 100%"></app-loading>
 
+<!-- Account Selection Screen -->
+<div *ngIf="!accountSelected" class="flex grow-1 vcenter">
+  <div class="hcenter">
+    <div class="span m-2">
+      <div class="flex">
+        <p-dropdown [options]="selectableAccounts"
+                    [(ngModel)]="selectedAccount"
+                    [style]="{'width':'300px'}"
+                    [placeholder]="'Select Account'">
 
-<!--<p-dialog header="Select an account" [(visible)]="accountNotSelected" [width]="500" [height]="300" *ngIf="!loading">-->
-  <!--<div class="center">-->
-    <!--<p-dropdown [options]="selectableAccounts" [autoWidth]="false" [scrollHeight]="200" >-->
+        </p-dropdown>
+      </div>
+    </div>
+    <div class="span m-2">
+      <div class="flex">
+        <button pButton type="button" class="ui-button-success hcenter"
+                [disabled]="!selectedAccount"
+                [label]="'Submit'"
+                (click)="selectAccount()">
 
-    <!--</p-dropdown>-->
-  <!--</div>-->
-<!--</p-dialog>-->
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
+<!-- Account Screen -->
+<div *ngIf="accountSelected" class="container-fluid p-2">
+  <h1 style="color: white; text-align: center;">{{selectedAccount.name}}</h1>
+  <div class="row m-0">
+    <!-- Account Details -->
+    <div class="col-md-6 col-sm-12 p-0" style="height: 700px;">
+      <div class="p-2">
+        <p-dataTable>
 
-<!--<div class="container-fluid p-t-1" *ngIf="!loading">-->
-  <!--&lt;!&ndash; Account Details &ndash;&gt;-->
-  <!--<div class="col-md-6 col-sm-12" >-->
+        </p-dataTable>
+      </div>
+    </div>
+    <!-- Account Charts -->
+    <div class="col-md-6 col-sm-12 p-0"  style="height: 700px; background-color: floralwhite">
+      <div class="p-2">
+        <p-chart type="pie" [data]="[65, 59, 80, 81, 56, 55, 40]">
 
-  <!--</div>-->
-  <!--&lt;!&ndash; Account Charts &ndash;&gt;-->
-  <!--<div class="col-md-6 col-sm-12">-->
-
-  <!--</div>-->
-<!--</div>-->
-<div class="container-fluid p-1" *ngIf="!loading">
-  <!-- Account Options -->
-  <div class="row p-s-1">
-    <div class="col-lg-2 col-md-3 col-sm-4 col-6 accountCard">
-
+        </p-chart>
+      </div>
     </div>
   </div>
 </div>
