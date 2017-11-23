@@ -2,7 +2,7 @@
 <app-loading *ngIf="loading" style="width: 100%"></app-loading>
 
 <!-- Account Selection Screen -->
-<div *ngIf="!accountSelected" class="flex grow-1 vcenter">
+<div *ngIf="!accountSelected && !loading" class="flex grow-1 vcenter">
   <div class="hcenter">
     <div class="span m-2">
       <div class="flex">
@@ -19,6 +19,12 @@
         <button pButton type="button" class="ui-button-success hcenter"
                 [disabled]="!selectedAccount"
                 [label]="'Submit'"
+                (click)="selectAccount()">
+
+        </button>
+
+        <button pButton type="button" class="ui-button-primary hcenter"
+                [label]="'Create Account'"
                 (click)="selectAccount()">
 
         </button>
@@ -40,9 +46,9 @@
       </div>
     </div>
     <!-- Account Charts -->
-    <div class="col-md-6 col-sm-12 p-0"  style="height: 700px; background-color: floralwhite">
+    <div class="col-md-6 col-sm-12 p-0">
       <div class="p-2">
-        <p-chart type="pie" [data]="[65, 59, 80, 81, 56, 55, 40]">
+        <p-chart type="pie" [data]="data">
 
         </p-chart>
       </div>

@@ -19,14 +19,39 @@ import {AccountModel} from '../../models/accountModel';
 export class AccountComponent implements OnInit {
   // Represents whether the user has selected an account to view
   accountSelected = false;
+
   // Represents if the page is in a loading state of not
   loading = false;
+
   // Represents all of the active accounts
   accounts: AccountModel[] = [];
+
+  // Represents the accounts for the dropdown
   selectableAccounts: SelectItem[] = [];
   selectedAccount: AccountModel;
 
-  constructor(private webApi: ApiService) { }
+
+  data: any;
+
+  constructor(private webApi: ApiService) {
+    this.data = {
+      labels: ['A', 'B', 'C'],
+      datasets: [
+        {
+          data: [300, 50, 100],
+          backgroundColor: [
+            '#FF6384',
+            '#36A2EB',
+            '#FFCE56'
+          ],
+          hoverBackgroundColor: [
+            '#FF6384',
+            '#36A2EB',
+            '#FFCE56'
+          ]
+        }]
+    };
+  }
 
   async ngOnInit() {
     this.loading = true;
