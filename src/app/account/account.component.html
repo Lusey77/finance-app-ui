@@ -1,5 +1,5 @@
 <!-- App Loading Screen -->
-<app-loading *ngIf="loading" style="width: 100%"></app-loading>
+<app-loading *ngIf="loading" [position]="5" [visible]="true" [style.color]="'white'"></app-loading>
 
 <!-- Account Selection Screen -->
 <div *ngIf="!accountSelected && !loading" class="flex grow-1 vcenter">
