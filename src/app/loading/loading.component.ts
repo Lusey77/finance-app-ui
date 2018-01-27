@@ -11,6 +11,7 @@ import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
 })
 export class LoadingComponent implements OnInit {
   @Input() icon: string = 'fa-spinner';
+  @Input() size: number = 1;
   @Input() picture: string;
   @Input() position: number = 5;
   @Input() modal: boolean = true;
@@ -24,9 +25,22 @@ export class LoadingComponent implements OnInit {
   ngOnInit() {
   }
 
-  getIcon() {
+  getClass() {
+    const classes = [];
     if (!this.picture) {
-      return this.icon;
+      classes.push(this.icon);
+      if (this.size === 1) {
+        return classes;
+      } else if (this.size === 2) {
+        classes.push('fa-2x');
+      } else if (this.size === 3) {
+        classes.push('fa-3x');
+      } else if (this.size === 4) {
+        classes.push('fa-4x');
+      } else if (this.size === 5) {
+        classes.push('fa-5x');
+      }
+      return classes;
     }
   }
 

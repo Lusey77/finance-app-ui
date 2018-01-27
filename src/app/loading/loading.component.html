@@ -1,6 +1,6 @@
-<div *ngIf='visible' class="loading">
+<div *ngIf=visible class="loading">
   <div class="fill" [ngClass]="iconPosition()">
-    <i *ngIf="!picture" class="fa fa-spin" [ngClass]="getIcon()" [style.height]="getHeight()" [style.width]="getWidth()"></i>
+    <i *ngIf="!picture" class="fa fa-spin" [ngClass]="getClass()" [style.height]="getHeight()" [style.width]="getWidth()"></i>
     <img *ngIf="picture" src="{{picture}}" [style.height]="getHeight()" [style.width]="getWidth()">
   </div>
 </div>
