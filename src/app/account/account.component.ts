@@ -67,11 +67,9 @@ export class AccountComponent implements OnInit {
             this.selectableAccounts = this.accounts.map(account => {
               return {label: account.name, value: account};
             });
-            resolve('success');
-          },
-          error => {
-            console.log(error);
-            reject('error');
+            resolve();
+          }, () => {
+            resolve();
           });
     });
   }
