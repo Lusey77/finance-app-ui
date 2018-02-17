@@ -2,6 +2,7 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {SelectItem} from 'primeng/primeng';
 import {ApiService} from '../api-service';
 import {AccountModel} from '../../models/accountModel';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-account',
@@ -33,7 +34,7 @@ export class AccountComponent implements OnInit {
 
   data: any;
 
-  constructor(private webApi: ApiService) {
+  constructor(private webApi: ApiService, private router: Router) {
     this.data = {
       labels: ['A', 'B', 'C'],
       datasets: [
@@ -76,7 +77,11 @@ export class AccountComponent implements OnInit {
 
   selectAccount() {
     this.accountSelected = true;
-    console.log(this.selectedAccount);
+  }
+
+  navigateToCreateAccountPage() {
+    // TODO: Create constant for routes
+    this.router.navigate(['Accounts/create']);
   }
 
 }
