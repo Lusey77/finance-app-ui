@@ -1,2 +1,8 @@
-<app-header [title]=title [navItems]=navItems></app-header>
-<router-outlet></router-outlet>
+<div class="background">
+  <div class="shrink flex">
+    <app-header [title]=title [navItems]=navItems [page]="page"></app-header>
+  </div>
+  <div class="grow flex">
+    <router-outlet></router-outlet>
+  </div>
+</div>

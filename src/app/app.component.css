@@ -1,0 +1,8 @@
+.background {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #262626;
+  display: flex;
+  flex-direction: column;
+}

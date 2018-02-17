@@ -1,0 +1,58 @@
+.loading {
+  height: 100%;
+}
+
+.fill {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+:host {
+  width: 100%;
+}
+
+.posTopLeft {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.posTopCenter {
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.posTopRight {
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.posMiddleLeft {
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.posMiddleCenter {
+  align-items: center;
+  justify-content: center;
+}
+
+.posMiddleRight {
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.posBottomLeft {
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.posBottomCenter {
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.posBottomRight {
+  align-items: flex-end;
+  justify-content: flex-end;
+}

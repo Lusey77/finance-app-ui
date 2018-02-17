@@ -1,0 +1,20 @@
+/* Host Styles */
+:host {
+  flex-grow: 1;
+  display: flex;
+  align-self: stretch;
+}
+
+/* Component Styles */
+.vcenter {
+  align-items: center;
+}
+
+.hcenter {
+  margin: 0 auto;
+}
+
+/* Overriding Styles */
+.ui-state-highlight {
+  background: #28a745 !important;
+}

@@ -1,26 +1,26 @@
 <div class="header">
-  <div class="col-sm-6 flex-valign-col" style="height: 100px">
-    <span class="header-font">Home</span>
+  <div class="col-sm-6 flex flex-column" style="height: 100px">
+    <span class="header-font">{{page}}</span>
   </div>
 </div>
-<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand logo-font flex-valign-row" routerLink="/">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand logo-font flex flex-row" routerLink="/">
     <img src="../../assets/img/logo.svg" width="30px" height="30px">
     <span>&nbsp;{{title}}</span>
   </a>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
     <ul class="navbar-nav mr-auto">
       <li *ngFor="let navItem of navItems" class="nav-item">
         <a class="nav-link" routerLink="{{navItem.navLink}}">{{navItem.navTitle}}</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2 " type="text" placeholder="Search">
+      <button class="btn btn-outline-success mt-3 my-sm-0" type="submit">Search</button>
     </form>
   </div>
+  <button class="navbar-toggler my-2" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 </nav>

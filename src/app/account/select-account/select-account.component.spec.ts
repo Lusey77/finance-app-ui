@@ -1,27 +1,27 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-import { TransactionComponent } from './transaction.component';
+import { SelectAccountComponent } from './select-account.component';
 
-describe('TransactionComponent', () => {
-  let component: TransactionComponent;
-  let fixture: ComponentFixture<TransactionComponent>;
+describe('SelectAccountComponent', () => {
+  let component: SelectAccountComponent;
+  let fixture: ComponentFixture<SelectAccountComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TransactionComponent ],
+      declarations: [ SelectAccountComponent ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TransactionComponent);
+    fixture = TestBed.createComponent(SelectAccountComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should be created', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
