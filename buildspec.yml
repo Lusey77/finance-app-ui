@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm install -g @angular/cli@latest
+      - npm install
+  build:
+    commands:
+      - echo Build started on `date`
+      - ng build
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+    files:
+      - '**/*'
+    base-directory: 'dist*'
+    discard-paths: yes
