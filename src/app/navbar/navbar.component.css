@@ -1,0 +1,9 @@
+:host {
+  width: 100%;
+}
+
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+  box-shadow: 0 0 10px #000;
+}

@@ -1,21 +1,33 @@
 <div class="flex grow vcenter">
-  <div class="hcenter" style="width: 400px;">
-    <form>
-      <div class="form-group" style="box-sizing: border-box">
-        <label for="accountname" style="color:white">Account Name</label>
-        <input class="form-control" id="accountname" aria-describedby="accountnamehelp">
+  <div class="hcenter form-container">
+    <form (ngSubmit)="createAccount(newAccountForm.value)" [formGroup]="newAccountForm">
+
+      <!-- Account Name -->
+      <div class="form-group border-box">
+        <label for="accountname" class="white">Account Name</label>
+        <input id="accountname" class="form-control" aria-describedby="accountnamehelp" formControlName="name"
+               #nameInput>
       </div>
-      <div class="form-group" style="box-sizing: border-box">
-        <label for="balance" style="color:white">Balance</label>
-        <input type="number" class="form-control" id="balance">
+
+      <!-- Balance -->
+      <div class="form-group border-box">
+        <label for="balance" class="white">Balance</label>
+        <input id="balance" class="form-control" type="number" formControlName="balance" #balanceInput>
       </div>
-      <div class="form-group" style="box-sizing: border-box">
-        <label for="description" style="color:white">Description</label>
-        <textarea class="form-control" id="description"></textarea>
+
+      <!-- Description -->
+      <div class="form-group border-box">
+        <label for="description" class="white">Description</label>
+        <textarea id="description" class="form-control" formControlName="description" #descriptionInput></textarea>
       </div>
-      <div class="form-group" style="text-align: center">
-        <button pButton type="button" class="ui-button-primary"
-                [label]="'Create Account'"></button>
+
+      <!-- Submit Button-->
+      <div class="form-group text-center">
+        <button pButton class="ui-button-primary" icon="fa fa-spin fa-spinner"
+                [label]="'Creating Account'" disabled *ngIf="creatingAccount"></button>
+        <button pButton type="submit" class="ui-button-primary"
+                [label]="'Create Account'" [disabled]="newAccountForm && !newAccountForm.valid"
+                *ngIf="!creatingAccount"></button>
       </div>
     </form>
   </div>

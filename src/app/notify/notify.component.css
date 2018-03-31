@@ -1,0 +1,171 @@
+.ls-notification {
+  color: #FFF;
+  cursor: default;
+  font-size: 1.3em;
+  left: 0;
+  opacity: 1;
+  padding: 25px 80px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  user-select: none;
+  z-index: 9999;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.ls-component {
+  position: absolute;
+}
+
+.ls-top {
+  top: 0;
+}
+
+.ls-bottom {
+  bottom: 0;
+}
+
+.ls-dismiss {
+  background-color: #333;
+  border-radius: 15px;
+  box-shadow: inset 2px 2px 7px 2px #000;
+  color: #DDD;
+  cursor: pointer;
+  font-size: 1.25em;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  opacity: 0.2;
+  position: absolute;
+  right: 40px;
+  text-shadow: 1px 1px 5px #000;
+  top: 25px;
+  width: 30px;
+}
+
+.ls-dismiss-icon {
+  position: absolute;
+  top: -1px;
+  left: 6px;
+}
+
+.ls-clickable {
+  cursor: pointer;
+}
+
+.ls-sticky .ls-dismiss {
+  display: block;
+}
+
+.ls-dismiss:hover {
+  background-color: #000;
+}
+
+.ls-dismiss:active {
+  background-color: #666;
+}
+
+/* Reduce notification size for mobile */
+@media only screen and (max-width: 480px) {
+  .ls {
+    font-size: 1em;
+    padding: 12px 25px;
+  }
+
+  .ls-dismiss {
+    font-size: 1em;
+    height: 20px;
+    line-height: 20px;
+    right: 5px;
+    top: 5px;
+    width: 20px;
+  }
+}
+
+/* Themes - Default - Pure */
+.ls-info {
+  background-color: #0e90d2;
+}
+
+.ls-error {
+  background-color: #dd514c;
+}
+
+.ls-success {
+  background-color: #5eb95e;
+}
+
+.ls-warn {
+  background-color: #f37b1d;
+}
+
+.ls-grimace {
+  background-color: #8058a5;
+}
+
+/* Themes - Prime */
+.ls-prime.ls-info {
+  background-color: #0033cc;
+}
+
+.ls-prime.ls-error {
+  background-color: #ff0000;
+}
+
+.ls-prime.ls-success {
+  background-color: #00cc00;
+}
+
+.ls-prime.ls-warn {
+  background-color: #ff9900;
+}
+
+.ls-prime.ls-grimace {
+  background-color: #660099;
+}
+
+/* Themes - Pastel */
+.ls-pastel.ls-info {
+  background-color: #7EA7D8;
+}
+
+.ls-pastel.ls-error {
+  background-color: #F6989D;
+}
+
+.ls-pastel.ls-success {
+  background-color: #82CA9D;
+}
+
+.ls-pastel.ls-warn {
+  background-color: #FDC68A;
+}
+
+.ls-pastel.ls-grimace {
+  background-color: #A187BE;
+}
+
+/* Themes - Pitchy */
+.ls-pitchy.ls-info {
+  background-color: #003471;
+}
+
+.ls-pitchy.ls-error {
+  background-color: #9E0B0F;
+}
+
+.ls-pitchy.ls-success {
+  background-color: #007236;
+}
+
+.ls-pitchy.ls-warn {
+  background-color: #A36209;
+}
+
+.ls-pitchy.ls-grimace {
+  background-color: #440E62;
+}

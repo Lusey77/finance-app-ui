@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-transaction',
+  selector: 'ls-transaction',
   templateUrl: './transaction.component.html',
   styleUrls: ['./transaction.component.css']
 })
-export class TransactionComponent implements OnInit {
+export class TransactionComponent {
+  public hexadecimalValue: string;
 
-  constructor() { }
+  public dropdownValue: string = '';
 
-  ngOnInit() {
+  onSubmit(value) {
+    alert(`Submit: ${JSON.stringify(value)}`);
   }
-
 }

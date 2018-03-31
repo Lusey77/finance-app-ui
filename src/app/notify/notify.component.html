@@ -1,0 +1,6 @@
+<div @slide class="ls ls-bottom" [ngClass]="class" *ngIf="showMessage" (click)="dismiss()" #notification>
+  <span class="ls-message" [innerHTML]="message"></span>
+  <div class="ls-dismiss">
+    <span style="position: absolute; top: -1px; left: 6px" class="ls-dismiss-icon">&times;</span>
+  </div>
+</div>

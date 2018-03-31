@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+:host {
+  background-color: transparent;
+  border: none;
+}
+
+.ls-button {
+  display: inline-block;
+  position: relative;
+  padding: 9px 13px;
+  text-decoration: none !important;
+  cursor: pointer;
+  text-align: center;
+  zoom: 1;
+  overflow: visible;
+  border: 0;
+  font-size: 14px;
+  font-family: Ubuntu;
+}
+
+.ls-button:focus {
+  outline: 0;
+}
+
+.ls-button:disabled {
+  opacity: .35;
+  filter: Alpha(Opacity= 35);
+  background-image: none;
+  cursor: default !important;
+}
+
+.ls-corner-all {
+  border-radius: 3px;
+}
+
+.ls-icon-right {
+  right: .5em;
+}
+
+.ls-icon-left {
+  left: .5em;
+}
+
+
+/* Primary */
+.ls-button {
+  background-color: #373737;
+  border-color: #373737;
+  color: #ffffff;
+}
+
+.ls-button:enabled:hover,
+.ls-button:focus {
+  background-color: #343434;
+  border-color: #343434;
+}
+
+.ls-button:enabled:active {
+  background-color: #313131;
+  border-color: #313131;
+  box-shadow: 0 0 2px #aaaaaa;
+}
+
+
+/* Alternative */
+.ls-button.ls-button-alternative {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #373a3c;
+}
+
+.ls-button.ls-button-alternative:enabled:hover,
+.ls-button.ls-button-alternative:focus {
+  background-color: #f2f2f2;
+  border-color: #f2f2f2;
+}
+
+.ls-button.ls-button-alternative:enabled:active  {
+  background-color: #e6e6e6;
+  border-color: #e6e6e6;
+  box-shadow: 0 0 2px #aaaaaa;
+}
+
+/* Primary */
+.ls-button.ls-button-primary {
+  background-color: #2399e5;
+  border-color: #2399e5;
+  color: #ffffff;
+}
+
+.ls-button.ls-button-primary:enabled:hover,
+.ls-button.ls-button-primary:focus {
+  background-color: #1f89ce;
+  border-color: #1f89ce;
+}
+
+.ls-button.ls-button-primary:enabled:active  {
+  background-color: #156090;
+  border-color: #156090;
+  box-shadow: 0 0 2px #aaaaaa;
+}
+
+/* Success */
+.ls-button.ls-button-success {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+  color: #ffffff;
+}
+
+.ls-button.ls-button-success:enabled:hover,
+.ls-button.ls-button-success:focus {
+  background-color: #4cae4c;
+  border-color: #5cb85c;
+}
+
+.ls-button.ls-button-success:enabled:active {
+  background-color: #449d44;
+  border-color: #5cb85c;
+  box-shadow: 0 0 2px #aaaaaa;
+}
+
+/* Info */
+.ls-button.ls-button-info {
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+  color: #ffffff;
+}
+
+.ls-button.ls-button-info:enabled:hover,
+.ls-button.ls-button-info:focus {
+  background-color: #46b8da;
+  border-color: #5bc0de;
+}
+
+.ls-button.ls-button-info:enabled:active {
+  background-color: #31b0d5;
+  border-color: #5bc0de;
+  box-shadow: 0 0 2px #aaaaaa;
+}
+
+/* Warning */
+.ls-button.ls-button-warning {
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+  color: #ffffff;
+}
+
+.ls-button.ls-button-warning:enabled:hover,
+.ls-button.ls-button-warning:focus {
+  background-color: #eea236;
+  border-color: #f0ad4e;
+}
+
+.ls-button.ls-button-warning:enabled:active {
+  background-color: #ec971f;
+  border-color: #f0ad4e;
+  box-shadow: 0 0 2px #aaaaaa;
+}
+
+/* Danger */
+.ls-button.ls-button-danger {
+  background-color: #d9534f;
+  border-color: #d9534f;
+  color: #ffffff;
+}
+
+.ls-button.ls-button-danger:enabled:hover,
+.ls-button.ls-button-danger:focus {
+  background-color: #d43f3a;
+  border-color: #d9534f;
+}
+
+.ls-button.ls-button-danger:enabled:active {
+  background-color: #c9302c;
+  border-color: #d9534f;
+  box-shadow: 0 0 2px #aaaaaa;
+}
+
+/* Purple */
+.ls-button.ls-button-purple {
+  background-color: #aa66cc;
+  border-color: #aa66cc;
+  color: #ffffff;
+}
+
+.ls-button.ls-button-purple:enabled:hover,
+.ls-button.ls-button-purple:focus {
+  background-color: #9933CC;
+  border-color: #9933CC;
+}
+
+.ls-button.ls-button-purple:enabled:active {
+  background-color: #832baf;
+  border-color: #832baf;
+  box-shadow: 0 0 2px #aaaaaa;
+}
+
+/* Teal */
+.ls-button.ls-button-teal {
+  background-color: #00bbad;
+  border-color: #00bbad;
+  color: #ffffff;
+}
+
+.ls-button.ls-button-teal:enabled:hover,
+.ls-button.ls-button-teal:focus {
+  background-color: #27ada0;
+  border-color: #27ada0;
+}
+
+.ls-button.ls-button-teal:enabled:active {
+  background-color: #008776;
+  border-color: #008776;
+  box-shadow: 0 0 2px #aaaaaa;
+}

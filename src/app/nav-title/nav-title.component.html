@@ -1,0 +1,5 @@
+<a class='navbar-brand flex flex-row' routerLink='{{navRoute}}' [style.color]='hover ? hoverColorHex : "white"'
+   (mouseover)='hover=true' (mouseleave)='hover=false'>
+  <img src='{{iconPath}}' width='30px' height='30px'>
+  <span>&nbsp;{{title}}</span>
+</a>

@@ -1,0 +1,13 @@
+:host {
+  flex-grow: 1;
+  display: flex;
+  align-self: stretch;
+}
+
+.vcenter {
+  align-items: center;
+}
+
+.hcenter {
+  margin: 0 auto;
+}

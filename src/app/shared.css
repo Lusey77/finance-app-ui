@@ -18,6 +18,7 @@
   flex-grow: 1;
 }
 
+/* Center Items */
 .center {
   align-items: center;
   align-content: center;
@@ -31,6 +32,10 @@
   margin: 0 auto;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .enabled {
   opacity: 1;
 }
@@ -42,4 +47,36 @@
 
 .span {
   width: 100%;
+}
+
+/* Fixes */
+.border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix {
+  clear: both;
+}
+
+/* Colors */
+.white {
+  color: white;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
+
+.green {
+  color: green;
+}
+
+.yellow {
+  color: yellow;
 }

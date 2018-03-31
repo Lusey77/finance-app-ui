@@ -1,21 +1,17 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {SelectItem} from 'primeng/primeng';
-import {ApiService} from '../api-service';
-import {AccountModel} from '../../models/accountModel';
-import {Router} from "@angular/router";
+import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { SelectItem } from 'primeng/primeng';
+import { ApiService } from '../api-service';
+import { AccountModel } from '../../models/accountModel';
+import { Router } from '@angular/router';
+import { NotificationService } from '../notification/notification.service';
+import { NotifyComponent } from '../notify/notify.component';
+import { NotificationSeverity } from '../notification/i.notification.model';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',
-  styleUrls: [
-    '../../../node_modules/primeng/resources/themes/omega/theme.css',
-    '../../../node_modules/primeng/resources/primeng.min.css',
-    '../../../node_modules/font-awesome/css/font-awesome.min.css',
-    '../../../node_modules/bootstrap/dist/css/bootstrap.min.css',
-    './account.component.css',
-    '../shared.css'
-  ],
-  encapsulation: ViewEncapsulation.Native
+  styleUrls: ['./account.component.css']
 })
 export class AccountComponent implements OnInit {
   // Represents whether the user has selected an account to view
@@ -34,7 +30,7 @@ export class AccountComponent implements OnInit {
 
   data: any;
 
-  constructor(private webApi: ApiService, private router: Router) {
+  constructor(private webApi: ApiService, private router: Router, private service: NotificationService) {
     this.data = {
       labels: ['A', 'B', 'C'],
       datasets: [
@@ -61,27 +57,49 @@ export class AccountComponent implements OnInit {
   }
 
   loadAccounts() {
-    return new Promise<string>((resolve, reject) => {
-      this.webApi.getAccounts()
-        .subscribe(response => {
-            this.accounts = response;
-            this.selectableAccounts = this.accounts.map(account => {
-              return {label: account.name, value: account};
-            });
-            resolve();
-          }, () => {
-            resolve();
-          });
-    });
+    // return new Promise<string>((resolve, reject) => {
+    //   this.webApi.getAccounts()
+    //     .subscribe(response => {
+    //         this.accounts = response;
+    //         this.selectableAccounts = this.accounts.map(account => {
+    //           return {label: account.name, value: account};
+    //         });
+    //         resolve();
+    //       }, () => {
+    //         resolve();
+    //       });
+    // });
   }
 
   selectAccount() {
     this.accountSelected = true;
   }
 
+  success() {
+    this.service.notifySuccess({title: `Success`, message: `Successfully signed in!`});
+  }
+
+  warning() {
+    this.service.notifyWarning({title: `Warning`, message: `Could not find the requested item!`});
+  }
+
+  info() {
+    this.service.notifyInfo({title: `Info`, message: `Your password is about to expire`});
+  }
+
+  error() {
+    this.service.notifyError({title: `Error`, message: `Server Error`});
+  }
+
+  clear() {
+    this.service.clearNotifications();
+  }
+
   navigateToCreateAccountPage() {
     // TODO: Create constant for routes
-    this.router.navigate(['Accounts/create']);
+    // this.router.navigate(['Accounts/create']);
+    this.service.notifySuccess({title: `Work`, message: `work`});
+
   }
 
 }

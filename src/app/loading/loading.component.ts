@@ -1,13 +1,11 @@
-import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-loading',
   templateUrl: './loading.component.html',
   styleUrls: [
-    './loading.component.css',
-    '../../../node_modules/font-awesome/css/font-awesome.min.css'
-  ],
-  encapsulation: ViewEncapsulation.Native
+    './loading.component.css'
+  ]
 })
 export class LoadingComponent implements OnInit {
   @Input() icon: string = 'fa-spinner';
@@ -20,7 +18,8 @@ export class LoadingComponent implements OnInit {
   @Input() width: number;
   @Input() fill: boolean = false;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

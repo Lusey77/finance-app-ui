@@ -16,18 +16,39 @@
     </div>
     <div class="span m-2">
       <div class="flex">
-        <button pButton type="button" class="ui-button-success hcenter"
-                [disabled]="!selectedAccount"
+        <ls-button [type]="'button'" class="ls-button-primary hcenter"
                 [label]="'Submit'"
                 (click)="selectAccount()">
 
-        </button>
+        </ls-button>
 
-        <button pButton type="button" class="ui-button-primary hcenter"
-                [label]="'Create Account'"
-                (click)="navigateToCreateAccountPage()">
+        <ls-button [type]="'button'" class="ls-button-success hcenter"
+                [label]="'Success'"
+                (click)="success()">
 
-        </button>
+        </ls-button>
+        <ls-button [type]="'button'" class="ls-button-warning hcenter"
+                [label]="'Warning'"
+                (click)="warning()">
+
+        </ls-button>
+        <ls-button [type]="'button'" class="ls-button-info hcenter"
+                [label]="'Info'"
+                (click)="info()">
+
+        </ls-button>
+        <ls-button [type]="'button'" class="ls-button-danger hcenter"
+                [label]="'Error'"
+                (click)="error()">
+
+        </ls-button>
+
+        <ls-button [type]="'button'" class="ls-button-alternative hcenter"
+                [label]="'Clear'"
+                (click)="clear()">
+
+        </ls-button>
+
       </div>
     </div>
   </div>

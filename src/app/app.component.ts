@@ -1,19 +1,24 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { ApiService } from './api-service';
 import { NavItem } from '../models/navItem';
+import { NotificationService } from './notification/notification.service';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: [
-    '../../node_modules/primeng/resources/themes/omega/theme.css',
-    '../../node_modules/primeng/resources/primeng.min.css',
-    '../../node_modules/font-awesome/css/font-awesome.min.css',
-    '../../node_modules/bootstrap/dist/css/bootstrap.min.css',
-    './app.component.css',
-    './shared.css'
-  ],
-  encapsulation: ViewEncapsulation.Native
+  styleUrls: ['./app.component.css'],
+  animations: [
+    trigger('myAwesomeAnimation', [
+      state('small', style({
+        transform: 'scale(1)',
+      })),
+      state('large', style({
+        transform: 'scale(2.0)',
+      })),
+      transition('small => large', animate('1000ms ease-in')),
+    ]),
+  ]
 })
 export class AppComponent {
   title: string = `Finance Manager`;
@@ -24,7 +29,8 @@ export class AppComponent {
       {navTitle: `Transactions`, navLink: `Transactions`}
     ];
 
-  constructor(private apiService: ApiService) {
+  constructor(private apiService: ApiService, private service: NotificationService) {
+    service.notifySuccess({title: `Please Work`, message: `Please!`});
   }
 
   getAccounts() {

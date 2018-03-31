@@ -7,12 +7,12 @@ import { HttpModule } from '@angular/http';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ HttpModule ],
+      imports: [HttpModule],
       declarations: [
         AppComponent
       ],
-      providers: [ ApiService ],
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+      providers: [ApiService],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
   }));
 

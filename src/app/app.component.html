@@ -1,7 +1,13 @@
+<ls-notify-notification></ls-notify-notification>
+<!--<ls-toastr-notification></ls-toastr-notification>-->
+
 <div class="background">
-  <div class="shrink flex">
-    <app-header [title]=title [navItems]=navItems [page]="page"></app-header>
-  </div>
+  <luse-header></luse-header>
+  <luse-navbar>
+    <luse-nav-title [title]="'Finance Manager'" [navRoute]="'/Login'"></luse-nav-title>
+    <luse-nav-item [title]="'Accounts'" [navRoute]="'/Accounts'"></luse-nav-item>
+    <luse-nav-item [title]="'Transactions'" [navRoute]="'/Transactions'"></luse-nav-item>
+  </luse-navbar>
   <div class="grow flex">
     <router-outlet></router-outlet>
   </div>

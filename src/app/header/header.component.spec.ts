@@ -10,11 +10,11 @@ describe('HeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ RouterTestingModule ],
-      declarations: [ HeaderComponent ],
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+      imports: [RouterTestingModule],
+      declarations: [HeaderComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

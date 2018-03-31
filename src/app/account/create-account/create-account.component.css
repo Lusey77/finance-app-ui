@@ -3,3 +3,7 @@
   display: flex;
   align-self: stretch;
 }
+
+.form-container {
+  width: 300px;
+}

@@ -1,9 +1,25 @@
-.header {
+.header-container {
+  position: relative;
   width: 100%;
   height: 100px;
+}
+
+.header-image {
   background: url(../../assets/img/defaultheaderimg.jpg) no-repeat center center;
   background-size: cover;
-  opacity: 0.5;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.header-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  opacity: 1;
 }
 
 .header-font {
@@ -15,36 +31,7 @@
   color: white;
 }
 
-.logo-font:hover {
-  color: #5CB85C !important;
-}
-
-.navbar {
-  padding-top: 0;
-  padding-bottom: 0;
-  box-shadow: 0 0 10px #000;
-}
-
-.navbar-brand {
-  padding-top: 13px;
-  padding-bottom: 13px;
-}
-
-.nav-item {
-  padding-top: 13px;
-  padding-bottom: 13px;
-}
-
-li:hover {
-  background-color: #5CB85C;
-  box-shadow:
-    inset 0 11px 13px -10px #000,
-    inset 0 -11px 13px -10px #000;
-  cursor: pointer;
-}
-
-span {
-  display: flex;
+.center {
   align-items: center;
 }
 

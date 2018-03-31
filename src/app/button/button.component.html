@@ -1,0 +1,24 @@
+<button
+  [attr.type]="type"
+  [class]="class"
+  [style]="style"
+  [disabled]="disabled"
+  (click)="onClick.emit($event)"
+  (focus)="onFocus.emit($event)"
+  (blur)="onBlur.emit($event)"
+  [ngClass]="{'ls-button ls-corner-all': true}"
+
+>
+
+  <span
+    [ngClass]="{'ls-icon-right': (iconPos === 'right'),
+                'ls-icon-left': (iconPos === 'left')}"
+    [class]="icon">
+
+  </span>
+
+  <span>
+    {{label}}
+  </span>
+
+</button>
